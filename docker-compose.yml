@@ -1,0 +1,10 @@
+services:
+  dbt:
+    build: .
+    container_name: airbnb_dbt
+    volumes:
+      - .:/project
+    working_dir: /project
+    stdin_open: true
+    tty: true
+    command: bash

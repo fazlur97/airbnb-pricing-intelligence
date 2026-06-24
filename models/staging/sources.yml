@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: main
+    tables:
+      - name: listings
+        description: Raw Airbnb listings data for Manchester
+      - name: calendar
+        description: Daily availability and pricing per listing
+      - name: reviews
+        description: Guest reviews per listing
+      - name: neighbourhoods
+        description: Neighbourhood reference data

@@ -1,0 +1,6 @@
+airbnb_manchester:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /project/airbnb.duckdb
