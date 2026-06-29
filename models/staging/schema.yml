@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: stg_listings
+    description: Cleaned and renamed Airbnb listings data for Manchester
+    columns:
+      - name: listing_id
+        description: Unique identifier for each listing
+        tests:
+          - not_null
+          - unique
+      - name: price_usd
+        description: Nightly price cleaned from raw text. 11.5% of listings have no price set.
+        tests:
+          - not_null:
+              severity: warn
+      - name: room_type
+        description: Type of room offered
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Entire home/apt', 'Private room', 'Shared room', 'Hotel room']
+      - name: neighbourhood
+        description: Cleansed neighbourhood name
+        tests:
+          - not_null
+
+  - name: stg_calendar
+    description: Cleaned daily availability and pricing per listing
+    columns:
+      - name: listing_id
+        description: Foreign key to stg_listings
+        tests:
+          - not_null
+      - name: calendar_date
+        description: The date of availability
+        tests:
+          - not_null
+      - name: available
+        description: Whether the listing is available on this date
+        tests:
+          - not_null
+
+  - name: stg_reviews
+    description: Cleaned guest reviews per listing
+    columns:
+      - name: review_id
+        description: Unique identifier for each review
+        tests:
+          - not_null
+          - unique:
+              severity: warn
+      - name: listing_id
+        description: Foreign key to stg_listings
+        tests:
+          - not_null
+      - name: review_date
+        description: Date the review was written
+        tests:
+          - not_null:
+              severity: warn
