@@ -46,11 +46,7 @@ DuckDB doesn't have a native Power BI connector, and its single-writer file lock
 
 **Pricing opportunities page** *(planned/in progress)* — quadrant view of price vs. occupancy split at the median, surfacing listings that may be under- or overpriced relative to comparable properties.
 
-**Seasonality page** *(planned/in progress)* — monthly price and occupancy trends from the `calendar` mart.
 
-## Screenshots
-
-_Add dashboard screenshots here._
 
 ## Possible next steps
 
