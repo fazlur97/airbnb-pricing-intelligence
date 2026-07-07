@@ -42,11 +42,12 @@ DuckDB doesn't have a native Power BI connector, and its single-writer file lock
 
 ## Dashboard
 
-**Overview page** — KPI cards (average price, total listings, occupancy rate), listings by neighbourhood, and a price-vs-occupancy scatter, with slicers for room type, neighbourhood, and price range.
-
-**Pricing opportunities page** *(planned/in progress)* — quadrant view of price vs. occupancy split at the median, surfacing listings that may be under- or overpriced relative to comparable properties.
+**Overview page** — KPI cards (average price, total listings, occupancy rate), listings by neighbourhood, and a price-vs-occupancy scatter, with slicers for price range.
 
 
+## Screenshots
+
+![Overview dashboard](screenshoots/Page_1.png)
 
 ## Possible next steps
 
