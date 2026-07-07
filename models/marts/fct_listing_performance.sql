@@ -41,12 +41,12 @@ final as (
             else 'Very Low'
         end                                         as occupancy_tier,
 
-        -- value score (high rating + high occupancy + reasonable price)
+
         round(
             (coalesce(review_scores_rating, 0) * 20)
             + (coalesce(occupancy_rate_pct, 0) * 0.5)
             - (case when price_usd > 200 then 10 else 0 end)
-        , 1)                                        as performance_score,
+        , 1) as performance_score,
 
         -- metadata
         last_scraped

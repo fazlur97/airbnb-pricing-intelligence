@@ -7,18 +7,14 @@ with listings as (
 final as (
 
     select
-        -- dimension
+        
         neighbourhood,
-
-        -- listing counts
         count(listing_id)                                   as total_listings,
         count(case when host_is_superhost then 1 end)       as superhost_listings,
         round(
             count(case when host_is_superhost then 1 end)
             * 100.0 / count(listing_id), 1
         )                                                   as superhost_pct,
-
-        -- pricing
         round(avg(price_usd), 2)                            as avg_nightly_price,
         round(min(price_usd), 2)                            as min_nightly_price,
         round(max(price_usd), 2)                            as max_nightly_price,
