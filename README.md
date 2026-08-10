@@ -47,7 +47,7 @@ DuckDB doesn't have a native Power BI connector, and its single-writer file lock
 
 ## Screenshots
 
-![Overview dashboard](screenshoots/Page_1.png)
+![Overview dashboard](https://raw.githubusercontent.com/fazlur97/airbnb-pricing-intelligence/refs/heads/main/screenshoots/Page1.png)
 
 ## Possible next steps
 
